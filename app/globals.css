@@ -1,0 +1,19 @@
+:root{--ink:#14213d;--paper:#f7f5f0;--pop:#ff3d2e;--line:#d9d4c7;--ok:#1b7f4b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Segoe UI",system-ui,sans-serif;line-height:1.5}
+main{max-width:560px;margin:0 auto;padding:32px 20px 64px}
+h1{font-size:clamp(2rem,7vw,3rem);line-height:1.05;margin:0 0 8px;letter-spacing:-.02em}
+.meta{color:#5b6478;margin:0 0 24px}
+label{display:block;font-weight:600;margin:16px 0 6px}
+input,select{width:100%;padding:12px;border:1.5px solid var(--line);border-radius:8px;font:inherit;background:#fff}
+input:focus,select:focus,button:focus-visible{outline:3px solid var(--ink);outline-offset:1px}
+.check{display:flex;gap:10px;align-items:center;margin-top:16px}
+.check input{width:auto}
+button{margin-top:24px;width:100%;padding:14px;border:0;border-radius:8px;background:var(--pop);color:#fff;font:inherit;font-weight:700;cursor:pointer}
+button:disabled{opacity:.6}
+.err{color:#b3261e;margin-top:12px}
+.ticket{background:#fff;border:2px dashed var(--ink);border-radius:12px;padding:24px;text-align:center}
+.ticket h2{margin:12px 0 4px}
+.result{padding:16px;border-radius:8px;margin-top:16px;font-weight:600}
+.result.ok{background:#e3f4ea;color:var(--ok)}.result.bad{background:#fde7e5;color:#b3261e}
+@media (prefers-reduced-motion:no-preference){.ticket{animation:pop .3s ease-out}@keyframes pop{from{transform:scale(.96)}}}
